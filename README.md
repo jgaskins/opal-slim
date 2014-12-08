@@ -1,26 +1,18 @@
-# Opal::Slim
+# Opal-Slim
 
-TODO: Write a gem description
+Opal-Slim is a set of Opal bindings for the Slim templating language, allowing you to use Slim templates in your Opal app. It was written to work with the [Clearwater framework](https://github.com/jgaskins/clearwater), but it should work just fine with any Opal app.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'opal-slim'
+gem 'opal-slim', github: 'jgaskins/opal-slim'
 ```
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install opal-slim
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
