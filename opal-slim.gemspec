@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_dependency 'slim', '~> 2.1'
+  spec.add_dependency 'slim', '~> 3.0'
   spec.add_dependency 'sprockets', '>= 2.12.1', '< 4.0.0'
   spec.add_dependency 'opal'
 end
