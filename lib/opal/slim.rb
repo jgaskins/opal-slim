@@ -12,7 +12,7 @@ module Opal
     def self.wrap slim, file
       <<-EOF
         Template.new('#{file}') do |slim|
-          #{slim}
+          #{compiled_slim(slim)}
         end
       EOF
     end

@@ -23,5 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_dependency 'slim', '~> 3.0'
   spec.add_dependency 'sprockets', '>= 2.12.1', '< 4.0.0'
-  spec.add_dependency 'opal'
+  spec.add_dependency 'opal', '~> 0.7.0.beta1'
 end
