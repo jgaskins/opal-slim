@@ -7,12 +7,16 @@ Opal-Slim is a set of Opal bindings for the Slim templating language, allowing y
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'opal-slim', github: 'jgaskins/opal-slim'
+gem 'opal-slim'
 ```
 
 And then execute:
 
     $ bundle
+
+## Usage:
+
+Opal-Slim stores your templates in the global `Template` object, so you simply need to call `Template[template_name].render(context)`, where `context` is the object that will receive the Ruby method calls.
 
 ## Contributing
 
