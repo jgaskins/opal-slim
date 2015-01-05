@@ -9,10 +9,10 @@ module Opal
       engine.call(source).gsub(/(slim_controls\w+) <</, '\1 +=')
     end
 
-    def self.wrap slim, file
+    def self.wrap compiled, file
       <<-EOF
         Template.new('#{file}') do |slim|
-          #{compiled_slim(slim)}
+          #{compiled}
         end
       EOF
     end

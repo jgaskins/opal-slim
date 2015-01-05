@@ -15,10 +15,10 @@ describe Opal::Slim do
   end
 
   it 'wraps a Slim template in a Template block' do
-    template = 'p lol'
+    template = '<compiled slim>'
     expected = <<-EOF
         Template.new('(slim)') do |slim|
-          #{::Opal::Slim.compiled_slim(template)}
+          <compiled slim>
         end
     EOF
 
