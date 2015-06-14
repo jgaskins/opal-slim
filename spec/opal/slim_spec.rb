@@ -8,6 +8,14 @@ describe Opal::Slim do
     expect(compiled).to eq %Q{_buf = []; _buf << (\"<p>lol</p>\".freeze); \n; _buf = _buf.join}
   end
 
+  it 'compiles a plain Slim template without indentation when is enabled' do
+    Slim::Engine.set_options(pretty: true) do
+      template = 'p lol'
+      compiled = ::Opal::Slim.compiled_slim(template)
+      expect(compiled).to eq %Q{_buf = []; _buf << (\"<p>lol</p>\".freeze); \n; _buf = _buf.join}
+    end
+  end
+
   it 'compiles a Slim template with evaluated code' do
     template = '= link_to "hi"'
     compiled = ::Opal::Slim.compiled_slim(template)
