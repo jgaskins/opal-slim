@@ -5,7 +5,7 @@ require 'sprockets'
 module Opal
   module Slim
     def self.compiled_slim source
-      engine = ::Slim::Engine.new
+      engine = ::Slim::Engine.with_options(pretty: false) { ::Slim::Engine.new }
       engine.call(source).gsub(/(slim_controls\w+) <</, '\1 +=')
     end
 
