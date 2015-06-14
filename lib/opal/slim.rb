@@ -5,8 +5,10 @@ require 'sprockets'
 module Opal
   module Slim
     def self.compiled_slim source
-      engine = ::Slim::Engine.with_options(pretty: false) { ::Slim::Engine.new }
-      engine.call(source).gsub(/(slim_controls\w+) <</, '\1 +=')
+      ::Slim::Engine.with_options(pretty: false) do
+        engine = ::Slim::Engine.new
+        engine.call(source).gsub(/(slim_controls\w+) <</, '\1 +=')
+      end
     end
 
     def self.wrap compiled, file
